@@ -12,7 +12,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "ata=ai_terminal_assistant.cli:cli",
+            "ata=ai_terminal_assistant.cli:main",
         ],
     },
     author="Ruvais",

@@ -16,5 +16,5 @@ dependencies = [
 ]
 
 [project.scripts]
-ata = "ai_terminal_assistant.cli:cli"
+ata = "ai_terminal_assistant.cli:main"
 

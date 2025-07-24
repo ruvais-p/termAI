@@ -1,53 +1,30 @@
-Here’s a **`README.md`** for your `termAI` project with all setup and execution instructions.
-
----
-
-```markdown
 # termAI
 
-**termAI** is an AI-powered terminal assistant that converts natural language prompts into shell commands using Google's Gemini API.  
-It can also fix broken shell commands and manage API keys.
+**termAI** is an AI-powered terminal assistant that converts natural language prompts into shell commands using Google's Gemini API. It can also fix broken shell commands and manage API keys.
 
----
+![Demo](https://via.placeholder.com/800x400?text=termAI+Demo+Placeholder) *(Replace with actual demo GIF)*
 
-## **Features**
-- Convert natural language to Linux shell commands.
-- Execute or preview commands before running.
-- Fix broken commands using error messages.
-- Manage your Google Gemini API key (`set`, `show`, `clear`).
-- Easy-to-use CLI with `ata` command.
+## Features
 
----
+- 🚀 Convert natural language to Linux shell commands
+- ⚡ Execute or preview commands before running
+- 🔧 Fix broken commands using error messages
+- 🔑 Manage your Google Gemini API key (set/show/clear)
+- 📦 Easy-to-use CLI with `ata` command
 
-## **Project Structure**
+## Installation
+
+### Prerequisites
+- Python 3.8+
+- Git (optional)
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/ruvais-p/termAI.git
+cd termAI
 ```
 
-termAI/
-│── ai\_terminal\_assistant/
-│   ├── **init**.py
-│   ├── cli.py
-│   ├── core.py
-│   ├── config.py
-│── main.py
-│── geminikey.txt
-│── setup.py
-│── pyproject.toml
-│── README.md
-
-````
-
----
-
-## **Installation**
-
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/yourusername/termAI.git
-cd termAI
-````
-
-### **2. Create and Activate a Virtual Environment**
-
+### 2. Create and Activate Virtual Environment
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate  # Linux/Mac
@@ -55,110 +32,119 @@ source .venv/bin/activate  # Linux/Mac
 .venv\Scripts\activate     # Windows
 ```
 
-### **3. Install the Project**
-
-Install in editable mode for development:
-
+### 3. Install the Package
 ```bash
 pip install -e .
 ```
 
----
+## Setup API Key
 
-## **Setup API Key**
-
-**Set your Gemini API key:**
-
+Set your Gemini API key (get one from [Google AI Studio](https://aistudio.google.com)):
 ```bash
-ata key set YOUR_API_KEY
+ata key YOUR_API_KEY
 ```
 
-**Show the current key:**
-
+Verify your key:
 ```bash
-ata key show
+ata key
 ```
 
-**Clear the key:**
+## Usage
 
+### Basic Command Generation
 ```bash
-ata key clear
+ata "list all PDF files in current directory"
 ```
 
----
-
-## **Usage**
-
-### **Run a Command**
-
-Convert a natural language prompt into a shell command:
-
+### Preview Without Execution
 ```bash
-ata run "list all txt files in current directory"
+ata --no-exec "find all files modified today"
 ```
 
-Preview without executing:
-
+### Fix Broken Commands
 ```bash
-ata run "list all txt files" -n
+ata fix "rm non-existent-file" "rm: cannot remove 'non-existent-file': No such file or directory"
 ```
 
-### **Fix a Broken Command**
+## Advanced Usage
 
-```bash
-ata fix "ls -l /unknown" "ls: cannot access '/unknown': No such file or directory"
+| Command | Description |
+|---------|-------------|
+| `ata "your prompt"` | Generate and execute command |
+| `ata "prompt" -n` | Generate command without executing |
+| `ata fix "cmd" "error"` | Fix a failed command |
+| `ata key` | Show current API key |
+| `ata key NEW_KEY` | Update API key |
+
+## Project Structure
+
+```
+termAI/
+├── ai_terminal_assistant/
+│   ├── __init__.py
+│   ├── cli.py        # Command line interface
+│   ├── core.py       # AI command generation logic
+│   ├── config.py     # API key management
+├── main.py           # Entry point
+├── geminikey.txt     # API key storage
+├── setup.py          # Package configuration
+├── pyproject.toml    # Build system config
+└── README.md
 ```
 
----
+## Troubleshooting
 
-## **Development**
-
-If you modify the code, reinstall the package:
-
+### Command Not Found
 ```bash
+# Ensure virtual environment is active
+source .venv/bin/activate
+# Reinstall package
 pip install -e .
 ```
 
----
+### API Errors
+- Check your internet connection
+- Verify API key is valid
+- Check Google AI Studio for quota limits
 
-## **Uninstall**
+## Development
 
-To remove `termAI`:
-
+1. Make code changes
+2. Reinstall package:
 ```bash
-pip uninstall termAI -y
+pip install -e .
+```
+3. Test changes:
+```bash
+ata "test command"
 ```
 
----
-
-## **Troubleshooting**
-
-1. **`ata: command not found`**
-   Make sure you are inside the virtual environment:
-
-   ```bash
-   source .venv/bin/activate
-   ```
-
-2. **Quota Error (429)**
-   The Gemini API free tier has strict limits. Upgrade your plan or wait for quota reset.
-
----
-
-## **License**
-
-This project is licensed under the MIT License.
-
----
-
-## **Author**
-
-**Ruvais P**
-
+## Uninstallation
+```bash
+pip uninstall termAI
+rm -rf ~/geminikey.txt  # Remove API key file
 ```
 
+## License
+MIT License - See [LICENSE](LICENSE) file
+
+## Author
+**Ruvais P**  
+[ruvaispuv@gmail.com](mailto:ruvaispuv@gmail.com)  
+[GitHub](https://github.com/ruvais-p)
+
 ---
 
-### **Next Step**
-Would you like me to **add this README.md to your project and give you a ready-to-use `final_project.zip` (with fixed CLI and setup)?**
+> ✨ **Pro Tip**: Add `alias ata='ata --no-exec'` to your `.bashrc`/`.zshrc` to default to safe mode!
 ```
+
+This README includes:
+1. Clear installation instructions
+2. Usage examples with code blocks
+3. Command reference table
+4. Project structure visualization
+5. Troubleshooting section
+6. Development notes
+7. Proper formatting for GitHub rendering
+
+Would you like me to make any adjustments to this README or package it with your project files?

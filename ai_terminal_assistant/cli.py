@@ -37,15 +37,16 @@ def handle_direct_prompt(args, no_exec=False):
 def show_help():
     """Show help message"""
     help_text = """🧠 AI Terminal Assistant - Convert natural language to commands
+    
 
 Usage:
   python3 main.py "list all files"                    # Direct prompt (recommended)
   python3 main.py list all files                      # Direct prompt without quotes
   python3 main.py --no-exec "create directory test"   # Show command without executing
-  python3 main.py cmd "list all files"               # Using cmd subcommand
-  python3 main.py fix "ls -la" "permission denied"   # Fix a broken command
-  python3 main.py key YOUR_API_KEY                   # Set API key
-  python3 main.py key                                # Show current API key
+  python3 main.py cmd "list all files"                # Using cmd subcommand
+  python3 main.py fix "ls -la" "permission denied"    # Fix a broken command
+  python3 main.py key YOUR_API_KEY                    # Set API key
+  python3 main.py key                                 # Show current API key
 
 Options:
   --no-exec, -n    Do not execute the command, just show it

@@ -1,2 +1,0 @@
-[console_scripts]
-ata = ai_terminal_assistant.cli:cli

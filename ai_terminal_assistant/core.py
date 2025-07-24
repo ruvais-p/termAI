@@ -39,7 +39,7 @@ def get_directory_info():
         # Limit depth for brevity
         if level > 2:
             del dirs[:]
-    return "\n".join(dir_structure[:20])  # Limit output length
+    return "\n".join(dir_structure)  # Limit output length
 
 def prompt_to_command(user_prompt: str) -> str:
     try:

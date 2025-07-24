@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: termAI
+Version: 1.0.0
+Summary: AI-powered terminal assistant to convert natural language into shell commands.
+Home-page: https://github.com/ruvais-p/termAI.git
+Author: Ruvais
+Author-email: Ruvais <ruvaispuv@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: google-generativeai
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python

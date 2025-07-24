@@ -2,8 +2,6 @@
 
 **termAI** is an AI-powered terminal assistant that converts natural language prompts into shell commands using Google's Gemini API. It can also fix broken shell commands and manage API keys.
 
-![Demo](https://via.placeholder.com/800x400?text=termAI+Demo+Placeholder) *(Replace with actual demo GIF)*
-
 ## Features
 
 - 🚀 Convert natural language to Linux shell commands
@@ -124,16 +122,6 @@ ata "test command"
 pip uninstall termAI
 rm -rf ~/geminikey.txt  # Remove API key file
 ```
-
-## License
-MIT License - See [LICENSE](LICENSE) file
-
-## Author
-**Ruvais P**  
-[ruvaispuv@gmail.com](mailto:ruvaispuv@gmail.com)  
-[GitHub](https://github.com/ruvais-p)
-
----
 
 > ✨ **Pro Tip**: Add `alias ata='ata --no-exec'` to your `.bashrc`/`.zshrc` to default to safe mode!
 ```

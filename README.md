@@ -1,4 +1,4 @@
-![Flow Expense Tracker Banner](https://github.com/ruvais-p/flow/blob/main/ChatGPT%20Image%20Jun%2024%2C%202025%2C%2010_40_58%20AM.png)
+![Flow Expense Tracker Banner](https://github.com/ruvais-p/termAI/blob/main/71d16e74-6072-4924-bd42-2d5b375a6ce7.png)
 # termAI
 
 **termAI** is an AI-powered terminal assistant that converts natural language prompts into shell commands using Google's Gemini API. It can also fix broken shell commands and manage API keys.
